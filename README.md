@@ -126,7 +126,7 @@ http://127.0.0.1:5000
 🧪 Test Image Example
 
 Below is an example of emotion prediction on a test image:
-![Test Image](static/images/test.jpg.png)
+![Test Image](static/images/test.png)
 
 
 ⚠️ Notes
@@ -142,6 +142,7 @@ This project is intended for educational and research purposes
 📜 License
 
 This project is for academic and learning use.#
+
 
 
 
