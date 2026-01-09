@@ -7,10 +7,10 @@ A deep learning–based Facial Emotion Recognition system with a Flask web inter
 ## 📌 Project Overview
 
 This project focuses on recognizing facial emotions from images and live video streams.  
-The system is divided into **two main parts**:
+The system is divided into two main parts:
 
-1. **Model Training & Experimentation** (Jupyter Notebook)
-2. **Real-Time Web Application** (Flask)
+1. Model Training & Experimentation (Jupyter Notebook)
+2. Real-Time Web Application (Flask)
 
 The trained deep learning model is integrated into a Flask application to perform real-time emotion detection using a webcam.
 
@@ -18,11 +18,11 @@ The trained deep learning model is integrated into a Flask application to perfor
 
 ## 📓 Training & Dataset Details (`FER 2 database.ipynb`)
 
-The file **`FER 2 database.ipynb`** contains the complete pipeline for training and evaluating the facial emotion recognition model. and also the **`RAFDB Dataset`** for Fine tuning the mpodel. 
+The notebook **`FER 2 database.ipynb`** contains the complete pipeline for training and evaluating the facial emotion recognition model.
 
 ### 🔹 Dataset
-- Facial expression dataset with grayscale/RGB face images
-- Images are categorized into **7 emotion classes**:
+- RAF-DB dataset used for fine-tuning
+- 7 emotion classes:
   - Angry
   - Disgust
   - Fear
@@ -30,28 +30,30 @@ The file **`FER 2 database.ipynb`** contains the complete pipeline for training 
   - Sad
   - Surprise
   - Neutral
-- Dataset is split into **training and validation sets**
-- Face images are resized and normalized before training
+- Dataset split into training and validation sets
+- Face images resized and normalized
 
 ### 🔹 Model Architecture
-- **EfficientNet-B0** backbone
-- Pretrained weights used as a base
-- Final classification layer modified for **7 emotion classes**
-- Implemented using **PyTorch**
+- EfficientNet-B0 backbone
+- Pretrained weights used
+- Final classification layer modified for 7 classes
+- Implemented using PyTorch
 
 ### 🔹 Training Process
 - Loss Function: Cross-Entropy Loss
 - Optimizer: Adam
-- Data augmentation applied to improve generalization
-- Model trained for multiple epochs until convergence
+- Data augmentation applied
+- Trained for multiple epochs
 
 ### 🔹 Model Performance
 - Training Accuracy: 62%
 - Validation Accuracy: 60%
-- The trained model is saved as:
-and used directly in the Flask application for inference.
 
-*(Replace XX% with your actual accuracy if you want — optional)*
+The trained model is saved as:
+
+model/fer_efficientnet_b0_paper.pth
+
+and used directly in the Flask application for inference.
 
 ---
 
@@ -71,9 +73,9 @@ and used directly in the Flask application for inference.
 
 The Flask application performs:
 - Webcam video capture
-- Face detection using **MTCNN**
+- Face detection using MTCNN
 - Emotion prediction using the trained EfficientNet model
-- Emotion smoothing to reduce flickering
+- Emotion smoothing for stable predictions
 - Live emotion display on detected faces
 
 ---
@@ -103,31 +105,20 @@ FER-Checking/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/FER-Checking.git
-cd FER-Checking
+git clone https://github.com/amritgupta0680/FER-Facial-Emotion-Recognition-.git
+cd FER-Facial-Emotion-Recognition-
 
----
-
-## ▶️ How to Run the Application
-
-1. Clone the repository:
+2. Run the Flask app:
 ```bash
-git clone https://github.com/yourusername/FER-Checking.git
-cd FER-Checking
-Run the Flask app:
-
 python app.py
 
-
-Open your browser:
-
+3. Open your browser:
+```bash
 http://127.0.0.1:5000
 
 🧪 Test Image Example
 
 Below is an example of emotion prediction on a test image:
-![Test Image](static/images/test.png)
-
 
 ⚠️ Notes
 
@@ -141,8 +132,4 @@ This project is intended for educational and research purposes
 
 📜 License
 
-This project is for academic and learning use.#
-
-
-
-
+This project is for academic and learning use.
