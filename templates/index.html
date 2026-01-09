@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facial Emotion Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎭 Facial Emotion Recognition</h1>
+    <p class="subtitle">Real-time emotion detection using deep learning</p>
+
+    <div class="video-card">
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+
+    <div class="info">
+        <p><strong>Emotions:</strong> Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral</p>
+    </div>
+</div>
+
+</body>
+</html>
